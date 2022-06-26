@@ -1,0 +1,295 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 15px;
+    scroll-behavior: smooth;
+}
+
+#logo, h2, h3 {
+    font-family: 'Merriweather', serif;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+body {
+    background: black;
+    color: white;
+    font-family: Roboto, sans-serif;
+}
+
+.container {
+    width: 1080px;
+    margin: auto;
+}
+
+header, footer {
+    background: #141414;
+}
+
+header {
+    height: 90px;
+    position: sticky;
+    top: 0;
+    display: flex;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    letter-spacing: 2px;
+}
+
+#logo span {
+    font-size: 14px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: red;
+}
+
+nav a + a {
+   margin-left: 20px;
+}
+
+header, section {
+    margin-bottom: 80px;
+}
+
+#biography .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#personal-picture {
+    background: url("../img/selfie.jpg") no-repeat center;
+    background-size: cover;
+    width: 513px;
+    height: 500px;
+    border-radius: 10px;
+}
+
+#biography aside {
+    width: 513px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#biography aside ul {
+    list-style-type: square;
+    padding-left: 15px;
+}
+
+#biography aside ul li {
+    margin-top: 35px;
+}
+
+section .container > h2 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+section .container > p {
+    margin-bottom: 30px;
+}
+
+section:not(section:first-of-type) {
+    text-align: center;
+}
+
+#skills-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skill {
+    flex-basis: 200px;
+}
+
+.skill img {
+    width: 160px;
+}
+
+.skill img, .skill h3 {
+    margin-bottom: 15px;
+}
+
+#hobbies-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 200px);
+    grid-gap: 50px;
+    grid-template-areas:
+        "movies bicycle"
+        "gaming music";
+}
+
+.hobby {
+    background: #1b1b1b;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 50px;
+    border-radius: 10px;
+}
+
+.hobby > img {
+    flex-basis: 45%;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 45%;
+}
+
+.text h3 {
+    margin-bottom: 15px;
+}
+
+.hobby:last-child, .hobby:nth-child(2) {
+    flex-direction: row-reverse;
+}
+
+.hobby:first-child {
+    grid-area: movies;
+}
+
+.hobby:nth-child(2) {
+    grid-area: bicycle;
+}
+
+.hobby:nth-child(3) {
+    grid-area: gaming;
+}
+
+.hobby:last-child {
+    grid-area: music;
+}
+
+#travels-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.travel {
+    width: 325px;
+}
+
+.travel div {
+    width: 100%;
+    height: 290px;
+    border-radius: 10px 10px 0 0;
+}
+
+.travel h3 {
+    background: #1b1b1b;
+    border-radius: 0 0 10px 10px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#berlin {
+    background: url("../img/berlin.jpg") center no-repeat;
+    background-size: cover;
+}
+
+#istanbul {
+    background: url("../img/istanbul.jpg") center no-repeat;
+    background-size: cover;
+}
+
+#dresden {
+    background: url("../img/dresden.jpg") center no-repeat;
+    background-size: cover;
+}
+
+footer .container {
+    display: flex;
+    height: 90px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#contact {
+    display: flex;
+    align-items: center;
+}
+
+#contact a {
+    width: 30px;
+    margin-left: 40px;
+    margin-top: 5px;
+    height: 30px;
+}
+
+#contact a:first-of-type {
+    background: url("../img/facebook_logo.svg") no-repeat;
+    background-size: cover;
+}
+
+#contact a:first-of-type:hover {
+    background: url("../img/facebook_logo_hover.svg") no-repeat;
+}
+
+#contact a:last-of-type {
+    background: url("../img/instagram_logo.svg") no-repeat;
+    background-size: cover;
+}
+
+#contact a:last-of-type:hover {
+    background: url("../img/instagram_logo_hover.svg") no-repeat;
+}
+
+footer form {
+    display: flex;
+    align-items: center;
+}
+
+footer form input {
+    border-radius: 10px 0 0 10px;
+    height: 40px;
+    background: #141414;
+    border: 2px white solid;
+    padding: 15px;
+    color: white;
+    width: 250px;
+}
+
+footer form button {
+    cursor: pointer;
+    background: black;
+    padding: 0 15px;
+    color: white;
+    border: 2px solid white;
+    border-radius: 0 10px 10px 0;
+    border-left: none;
+    height: 40px;
+}
+
+footer form button:hover {
+    background: red;
+}
