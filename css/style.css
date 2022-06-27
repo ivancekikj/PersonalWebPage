@@ -59,12 +59,12 @@ header .container {
     font-size: 14px;
 }
 
-nav a {
+a {
     color: white;
     text-decoration: none;
 }
 
-nav a:hover {
+a:hover {
     color: red;
 }
 
@@ -239,57 +239,22 @@ footer .container {
     align-items: center;
 }
 
-#contact a {
+#contact img {
     width: 30px;
-    margin-left: 40px;
-    margin-top: 5px;
     height: 30px;
+    margin-right: 10px;
 }
 
-#contact a:first-of-type {
-    background: url("../img/facebook_logo.svg") no-repeat;
-    background-size: cover;
-}
-
-#contact a:first-of-type:hover {
-    background: url("../img/facebook_logo_hover.svg") no-repeat;
-}
-
-#contact a:last-of-type {
-    background: url("../img/instagram_logo.svg") no-repeat;
-    background-size: cover;
-}
-
-#contact a:last-of-type:hover {
-    background: url("../img/instagram_logo_hover.svg") no-repeat;
-}
-
-footer form {
+#contact > div, #contact a {
     display: flex;
     align-items: center;
 }
 
-footer form input {
-    border-radius: 10px 0 0 10px;
-    height: 40px;
-    background: #141414;
-    border: 2px white solid;
-    padding: 15px;
-    color: white;
-    width: 250px;
+#contact a {
+    padding-right: 20px;
+    border-right: 1px white solid;
 }
 
-footer form button {
-    cursor: pointer;
-    background: black;
-    padding: 0 15px;
-    color: white;
-    border: 2px solid white;
-    border-radius: 0 10px 10px 0;
-    border-left: none;
-    height: 40px;
-}
-
-footer form button:hover {
-    background: red;
+#contact a:last-of-type, #contact > div {
+    padding-left: 20px;
 }
