@@ -101,7 +101,7 @@ header, section {
     padding-left: 15px;
 }
 
-#biography aside ul li {
+#biography li {
     margin-top: 35px;
 }
 
@@ -111,7 +111,7 @@ section .container > h2 {
 }
 
 section .container > p {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 section:not(section:first-of-type) {
@@ -240,8 +240,8 @@ footer .container {
 }
 
 #contact img {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     margin-right: 10px;
 }
 
@@ -257,4 +257,185 @@ footer .container {
 
 #contact a:last-of-type, #contact > div {
     padding-left: 20px;
+}
+
+@media only screen and (max-width: 1080px) {
+    .container {
+        width: 90%;
+    }
+
+    .hobby, .hobby:last-child, .hobby:nth-child(2) {
+        padding: 15px;
+        flex-direction: column;
+    }
+
+    .hobby > img {
+        flex-basis: 150px;
+        margin-bottom: 15px;
+    }
+
+    .text {
+        flex-basis: auto;
+    }
+
+    .hobby p {
+        width: 70%;
+        margin: auto;
+    }
+
+    footer .container {
+        height: auto;
+        padding: 15px 0;
+    }
+}
+
+@media only screen and (max-width: 1080px) and (min-width: 700px) {
+    #biography aside {
+        flex-basis: 40%;
+    }
+
+    #personal-picture {
+        flex-basis: 50%;
+        height: 400px;
+    }
+
+    .skill img {
+        width: 100px;
+    }
+
+    #hobbies-content {
+        grid-gap: 25px;
+        grid-template-rows: repeat(2, auto);
+    }
+
+    #travels-content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "berlin istanbul dresden";
+        grid-column-gap: 25px;
+    }
+
+    .travel {
+        width: auto;
+    }
+
+    .travel:first-child {
+        grid-area: berlin;
+    }
+
+    .travel:nth-child(2) {
+        grid-area: istanbul;
+    }
+
+    .travel:last-child {
+        grid-area: dresden;
+    }
+
+    footer .container {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    footer p {
+        margin-bottom: 15px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    header, section {
+        margin-bottom: 50px;
+    }
+
+    header {
+        height: auto;
+    }
+
+    header .container {
+        display: block;
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    #logo {
+        margin-bottom: 15px;
+    }
+
+    #biography .container{
+        flex-direction: column-reverse;
+    }
+
+    #biography aside {
+        background: #1b1b1b;
+        border-radius: 0 0 10px 10px;
+        padding: 15px;
+    }
+
+    #biography .container aside h2 {
+        text-align: center;
+    }
+
+    #biography li {
+        margin-top: 15px;
+    }
+
+    #personal-picture {
+        height: 300px;
+        border-radius: 10px 10px 0 0;
+    }
+
+    #skills-content, #travels-content, #hobbies-content {
+        display: block;
+    }
+
+    .skill, .hobby, .travel, #personal-picture, #biography aside {
+        width: 100%;
+    }
+
+    .skill:not(.skill:last-child), .hobby:not(.hobby:last-child),
+    .travel:not(.travel:last-child) {
+        margin-bottom: 30px;
+    }
+
+    .skill h3, .skill img {
+        margin-bottom: 5px;
+    }
+
+    .skill p {
+        width: 70%;
+        margin: auto;
+    }
+
+    .skill img {
+        width: 120px;
+    }
+
+    .hobby {
+        display: block;
+    }
+
+    .hobby img {
+        width: 120px;
+    }
+
+    footer .container {
+        display: block;
+        text-align: center;
+    }
+
+    #contact {
+        flex-direction: column;
+    }
+
+    #contact a, footer p {
+        margin-bottom: 15px;
+    }
+
+    #contact a {
+        padding-right: 0;
+        border-right: none;
+    }
+
+    #contact a:last-of-type, #contact > div {
+        padding-left: 0;
+    }
 }
